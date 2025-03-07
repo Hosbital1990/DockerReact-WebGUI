@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items at the top */
+  height: 100vh; /* Full height to center vertically */
+  background-color: #e0f7fa; /* Light cyan */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+#root {
+  width: 70vw; /* 70% of the viewport width */
+  height: 70vh; /* 70% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* White background */
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 8em;
+  padding: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 3em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 3em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+header.navbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  width: 96%; /* Ensure header fits within the container with margin */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  position: absolute;
+  top: 2%;
+  left: 2%; /* Add margin from the left side */
+  right: 2%; /* Add margin from the right side */
+  transform: translateX(0);
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 100px); /* Adjust height to fit within the viewport */
+  overflow: hidden; /* Prevent scrolling */
+  margin-top: 100px; /* Adjust margin to account for header */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5rem;
+  background-color: #f0f0f0;
+  width: 20%;
+  box-sizing: border-box;
+  margin-left: 0; /* Shift to the left as much as possible */
+  position: absolute;
+  left: 1%;
+  transform: translateX(+5%); /* Stick to the left side of the page */
+}
+
+.buttons-container button {
+  padding: 1rem;
+  margin: 2rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  width: 76%; /* Adjust width to fit within the remaining space */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.media-container video,
+.media-container img {
+  max-width: 100%;
+  height: auto;
+}
